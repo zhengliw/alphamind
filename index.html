@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<h1>Quizliste</h1>
+{% for quiz in site.data.index %}
+	<div class="quiz-info-card">
+		<div class="quiz-info-card-text">
+			<h3>{{ quiz.name }}</h3>
+			<p>{{ quiz.description }}</p>
+		</div>
+		<a class="quiz-info-card-start" href="{{ "quiz/" | relative_url 
+			  }}{{ quiz.id }}.html"> Start!</a>
+	</div>
+{% endfor %}
+
+

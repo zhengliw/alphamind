@@ -1,0 +1,42 @@
+body {
+	padding: 0;
+	margin: 0;
+	font-family: 'Noto Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Noto Sans Mono', monospace;
+}
+
+header {
+	padding: 16px;
+	border-bottom: 2px solid black;
+	position: sticky;
+}
+
+header #site-title {
+	font-family: 'Noto Sans Mono', monospace;
+	font-size: large;
+}
+
+.content {
+	padding: 16px;
+}
+
+.quiz-info-card {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border: 2px solid black;
+	padding: 16px;
+}
+
+.quiz-info-card-start {
+	font-family: 'Noto Sans Mono', monospace;
+	display: inline-block;
+	border: 2px solid black;
+	color: inherit;
+	text-decoration: unset;
+	padding: 16px 32px;
+}
+
