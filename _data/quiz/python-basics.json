@@ -1,0 +1,29 @@
+{
+	"id": "python-basics",
+	"name": "Python-Grundlagen",
+	"description": "Python-Grundlagen auffrischen und dein Wissen testen!",
+	"questions": [
+		{
+			"label": "Welche dieser Aussagen sind wahr?",
+			"type": "checkbox",
+			"options": [
+				{
+					"label": "Python ist plattformübergreifend verfügbar.",
+					"correct": true
+				},
+				{
+					"label": "Python ist eine kompilierte Sprache.",
+					"correct": false
+				},
+				{
+					"label": "Python ist eine objektorientierte Sprache.",
+					"correct": true
+				},
+				{
+					"label": "Der Standard-Python-\"Runtime\" wurde in C implementiert.",
+					"correct": true
+				}
+			]
+		}
+	]
+}

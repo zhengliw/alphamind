@@ -2,7 +2,46 @@
 layout: default
 ---
 
-{% for question in site.data.quiz[page.quiz_id] %}
+<h1>{{ site.data.quiz[page.quiz_id].name }}</h1>
+<p>{{ site.data.quiz[page.quiz_id].description }}</p>
 
+<form id="quiz-form" action="">
+<ol>
+{% for question in site.data.quiz[page.quiz_id].questions %}
+{% assign current_index = forloop.index %}
+<h2>
+	<li>{{ question.label }}</li>
+</h2>
+{% for option in question.options %}
+<div id="question-{{ current_index }}-option-{{ forloop.index }}"
+	class="question-card">
+	<input
+		class="quiz-input-{{ question.type }}"
+		id="question-{{ current_index }}-option-{{ forloop.index
+		}}-input"
+		type="{{ question.type }}"
+		name="question-{{ current_index }}"
+		value="option-{{ forloop.index }}"
+	>
+	<label for="question-{{ current_index }}-option-{{ forloop.index
+		}}-input">
+		{{ option.label }}
+	</label>
+</div>
 {% endfor %}
+<div class="question-score" id="question-{{ forloop.index }}-score"></div>
+{% endfor %}
+</ol>
+<div class="results">
+	<h2>Ergebnis</h2>
+	<div id="total-score">Kontrolliere die Antworten mit einem Klick auf die
+	Schaltfläche.</div>
+	<button id="quiz-submit-button" type="submit">Antworten kontrollieren</button>
+</div>
+</form>
+
+<script>
+const current_page_quiz = {{ site.data.quiz[page.quiz_id] | jsonify }};
+{% include quiz.js %}
+</script>
 

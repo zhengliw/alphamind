@@ -1,3 +1,18 @@
+* {
+	--primary-color: black;
+	--background-color: white;
+	--correct-color: rgb(10, 240, 10);
+	--incorrect-color: rgb(240, 10, 10);
+	color: var(--primary-color);
+}
+
+@media (prefers-color-scheme: dark) {
+	* {
+		--primary-color: white;
+		--background-color: rgb(15, 15, 15);
+	}
+}
+
 body {
 	padding: 0;
 	margin: 0;
@@ -10,7 +25,7 @@ h1, h2, h3, h4, h5, h6 {
 
 header {
 	padding: 16px;
-	border-bottom: 2px solid black;
+	border-bottom: 2px solid var(--primary-color);
 	position: sticky;
 }
 
@@ -27,16 +42,59 @@ header #site-title {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	border: 2px solid black;
+	border: 2px solid var(--primary-color);
 	padding: 16px;
 }
 
 .quiz-info-card-start {
 	font-family: 'Noto Sans Mono', monospace;
 	display: inline-block;
-	border: 2px solid black;
+	border: 2px solid var(--primary-color);
 	color: inherit;
 	text-decoration: unset;
 	padding: 16px 32px;
+	margin: 16px;
+}
+
+.option-incorrect label {
+	color: var(--incorrect-color) !important;
+}
+
+.question-score {
+	border: 2px solid var(--primary-color);
+	padding: 8px;
+	margin: 8px 0;
+	display: none;
+	text-align: right;
+}
+
+.results {
+	padding: 16px;
+	display: flex;
+	flex-direction: column;
+	border: 2px solid var(--primary-color);
+}
+
+.results * {
+	margin: 16px 0;
+}
+
+#quiz-submit-button {
+	align-self: end;
+	border: 2px solid var(--primary-color);
+	color: inherit;
+	background-color: var(--background-color);
+	width: 225px;
+	height: 50px;
+	font-size: small;
+	font-family: 'Noto Sans Mono', monospace;
+
+	transition: color 250ms;
+	transition: background-color 250ms;
+}
+
+#quiz-submit-button:hover {
+	background-color: var(--primary-color);
+	color: var(--background-color);
 }
 
