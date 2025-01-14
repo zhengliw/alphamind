@@ -9,7 +9,8 @@
 </head>
 <body>
 	<header>
-		<span id="site-title">{{ site.title }}</span>
+		<a href="{{ "/" | relative_url }}"><span id="site-title">{{ site.title
+				}}</span></a>
 	</header>
 	<div class="content">
 		{{ content }}

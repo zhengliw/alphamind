@@ -7,6 +7,7 @@ function checkAnswers(quiz) {
 		for(let j = 0; j < quiz.questions[i].options.length; j++, subtotal++) {
 			let option = document.getElementById(`question-${i + 1}-option-${j + 1}-input`);
 			let option_container = document.getElementById(`question-${i + 1}-option-${j + 1}`);
+			option_container.classList.remove("option-correct", "option-incorrect");
 			if(option.checked == quiz.questions[i].options[j].correct) {
 				option_container.classList.add("option-correct");
 				subcorrect++;
