@@ -52,10 +52,19 @@ header #site-title {
 	font-family: 'Noto Sans Mono', monospace;
 	display: inline-block;
 	border: 2px solid var(--primary-color);
-	color: inherit;
+	color: var(--primary-color);
+	background-color: var(--background-color);
 	text-decoration: unset;
 	padding: 16px 32px;
 	margin: 16px;
+
+	transition: color 250ms;
+	transition: background-color 250ms;
+}
+
+.quiz-info-card-start:hover {
+	color: var(--background-color);
+	background-color: var(--primary-color);
 }
 
 .option-incorrect label {
