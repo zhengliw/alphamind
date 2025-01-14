@@ -24,6 +24,72 @@
 					"correct": true
 				}
 			]
+		},
+		{
+			"label": "Welche der folgenden eingebauten Datenstrukturen können mehrere Elemente festhalten?",
+			"type": "checkbox",
+			"options" : [
+				{
+					"label": "list",
+					"correct": true
+				},
+				{
+					"label": "float",
+					"correct": false
+				},
+				{
+					"label": "dict",
+					"correct": true
+				},
+				{
+					"label": "tuple",
+					"correct": true
+				}
+			]
+		},
+		{
+			"label": "Welche Wege sind möglich, um ein Element zu einer Liste, ohne Berücksichtigung der Reihenfolge, hinzuzufügen?",
+			"type": "checkbox",
+			"options": [
+				{
+					"label": "demo_list.append(element)",
+					"correct": true
+				},
+				{
+					"label": "demo_list[1:1] = element",
+					"correct": true
+				},
+				{
+					"label": "demo_list.push(element)",
+					"correct": false
+				},
+				{
+					"label": "demo_list += [element]",
+					"correct": true
+				}
+			]
+		},
+		{
+			"label": "Was stimmt über str-Objekten NICHT?",
+			"type": "radio",
+			"options": [
+				{
+					"label": "Sie halten Daten in Form von Text fest.",
+					"correct": false
+				},
+				{
+					"label": "Mit der format-Methode kann man str-Objekte als Vorlagen benutzen und andere Werte einfüllen.",
+					"correct": false
+				},
+				{
+					"label": "str-Objekte können nicht mit dem Slicer verwendet werden (\"[x:y]\").",
+					"correct": true
+				},
+				{
+					"label": "str-Objekte sind unveränderlich (immutable).",
+					"correct": false
+				}
+			]
 		}
 	]
 }

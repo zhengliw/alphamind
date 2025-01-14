@@ -4,15 +4,26 @@ function checkAnswers(quiz) {
 	for(let i = 0; i < quiz.questions.length; i++) {
 		let subtotal = 0;
 		let subcorrect = 0;
-		for(let j = 0; j < quiz.questions[i].options.length; j++, subtotal++) {
+		let isRadio = false;
+		if(quiz.questions[i].type === "radio") {
+			subtotal = 1;
+			isRadio = true;
+		}
+		for(let j = 0; j < quiz.questions[i].options.length; j++) {
 			let option = document.getElementById(`question-${i + 1}-option-${j + 1}-input`);
 			let option_container = document.getElementById(`question-${i + 1}-option-${j + 1}`);
 			option_container.classList.remove("option-correct", "option-incorrect");
 			if(option.checked == quiz.questions[i].options[j].correct) {
 				option_container.classList.add("option-correct");
-				subcorrect++;
+				if(isRadio) {
+					subcorrect = 1;
+					break;
+				}
 			} else {
 				option_container.classList.add("option-incorrect");
+			}
+			if(!isRadio) {
+				subtotal++;
 			}
 		}
 		let score = document.getElementById(`question-${i + 1}-score`);
