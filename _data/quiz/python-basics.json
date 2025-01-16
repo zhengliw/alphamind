@@ -90,6 +90,50 @@
 					"correct": false
 				}
 			]
+		},
+		{
+			"label": "Wie kann man den Datentyp einer Variable herausfinden?",
+			"type": "radio",
+			"options": [
+				{
+					"label": "type(variable)",
+					"correct": true
+				},
+				{
+					"label": "datentyp(variable)",
+					"correct": false
+				},
+				{
+					"label": "get_type(variable)",
+					"correct": false
+				},
+				{
+					"label": "variable.type",
+					"correct": false
+				}
+			]
+		},
+		{
+			"label": "Welche Funktion ist standardmäßig in Python enthalten und erlaubt es, Eingaben vom Benutzer zu erhalten?",
+			"type": "radio",
+			"options": [
+				{
+					"label": "input()",
+					"correct": true
+				},
+				{
+					"label": "readline()",
+					"correct": false
+				},
+				{
+					"label": "get_input()",
+					"correct": false
+				},
+				{
+					"label": "scan()",
+					"correct": false
+				}
+			]
 		}
 	]
 }
