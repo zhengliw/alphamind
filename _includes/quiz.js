@@ -28,6 +28,7 @@ function checkboxHandler(question, questionIndex) {
 	for(let i = 0; i < question.options.length; i++) {
 		let option = document.getElementById(`question-${questionIndex + 1}-option-${i + 1}-input`);
 		let option_container = document.getElementById(`question-${questionIndex + 1}-option-${i + 1}`);
+		option_container.classList.remove("option-incorrect", "option-correct");
 		if(option.checked === question.options[i].correct) {
 			subcorrect++;
 			option_container.classList.add("option-correct");
@@ -40,16 +41,16 @@ function checkboxHandler(question, questionIndex) {
 }
 
 function radioHandler(question, questionIndex) {
-	let subtotal = 1, subcorrect = 0;
+	let subtotal = 1, subcorrect = 1;
 	for(let i = 0; i < question.options.length; i++) {
 		let option = document.getElementById(`question-${questionIndex + 1}-option-${i + 1}-input`);
 		let option_container = document.getElementById(`question-${questionIndex + 1}-option-${i + 1}`);
+		option_container.classList.remove("option-incorrect", "option-correct");
 		if(option.checked === question.options[i].correct) {
-			subcorrect = 1;
 			option_container.classList.add("option-correct");
-			break;
 		} else {
 			option_container.classList.add("option-incorrect");
+			subcorrect = 0;
 		}
 	}
 	return {subtotal: subtotal, subcorrect: subcorrect}
