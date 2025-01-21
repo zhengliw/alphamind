@@ -56,7 +56,7 @@
 					"correct": true
 				},
 				{
-					"label": "demo_list[1:1] = element",
+					"label": "demo_list[1:1] = [element]",
 					"correct": true
 				},
 				{
