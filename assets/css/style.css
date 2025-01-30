@@ -47,6 +47,7 @@ header #site-title {
 	align-items: center;
 	border: 2px solid var(--primary-color);
 	padding: 16px;
+	margin: 16px 0;
 }
 
 .quiz-info-card-start {

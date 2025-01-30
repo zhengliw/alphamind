@@ -1,0 +1,161 @@
+{
+	"id": "linux-basics",
+	"name": "Linux-Grundlagen",
+	"description": "I use Arch btw... Aber wie gut?",
+	"questions": [
+		{
+			"label": "Welche dieser Aussagen sind wahr?",
+			"type": "checkbox",
+			"options": [
+				{
+					"label": "Linux ist ein NT-ähnlicher Kernel.",
+					"correct": false
+				},
+				{
+					"label": "Die meisten Desktop-Distributionen liefern mit Busybox-Tools.",
+					"correct": false
+				},
+				{
+					"label": "Die meisten Hardware-Treiber sind im Kernel eingebaut, andere können als out-of-tree Module geladen werden.",
+					"correct": true
+				},
+				{
+					"label": "Tux ist ein Pinguin 🐧",
+					"correct": true
+				}
+			]
+		},
+		{
+			"label": "Welche der gelisteten Betriebssysteme sind Linux?",
+			"type": "checkbox",
+			"options": [
+				{
+					"label": "Ubuntu",
+					"correct": true
+				},
+				{
+					"label": "Fedora",
+					"correct": true
+				},
+				{
+					"label": "Opnsense",
+					"correct": false
+				},
+				{
+					"label": "Arch",
+					"correct": true
+				}
+			]
+		},
+		{
+			"label": "Was ist der Paketmanager auf Debian?",
+			"type": "radio",
+			"options": [
+				{
+					"label": "yum",
+					"correct": false
+				},
+				{
+					"label": "pacman",
+					"correct": false
+				},
+				{
+					"label": "cp",
+					"correct": false
+				},
+				{
+					"label": "apt",
+					"correct": true
+				}
+			]
+		},
+		{
+			"label": "Welche hiervon sind keine Desktop Environments?",
+			"type": "checkbox",
+			"options": [
+				{
+					"label": "GNOME",
+					"correct": false
+				},
+				{
+					"label": "grub",
+					"correct": true
+				},
+				{
+					"label": "Super Tux Cart",
+					"correct": true
+				},
+				{
+					"label": "KDE Plasma",
+					"correct": false
+				}
+			]
+		},
+		{
+			"label": "Welche der folgenden Aussagen über Cron-Jobs sind wahr?",
+			"type": "checkbox",
+			"options": [
+				{
+					"label": "Cron-Jobs werden verwendet, um Aufgaben zu planen.",
+					"correct": true
+				},
+				{
+					"label": "Die Crontab-Datei enthält die geplanten Aufgaben.",
+					"correct": true
+				},
+				{
+					"label": "Cron-Jobs können nur vom Root-Benutzer erstellt werden.",
+					"correct": false
+				},
+				{
+					"label": "Der Befehl 'crontab -e' öffnet die Crontab-Datei zur Bearbeitung.",
+					"correct": true
+				}
+			]
+		},
+		{
+			"label": "Welcher Befehl wird verwendet, um Berechtigungen einer Datei zu ändern?",
+			"type": "radio",
+			"options": [
+				{
+					"label": "chmod",
+					"correct": true
+				},
+				{
+					"label": "chown",
+					"correct": false
+				},
+				{
+					"label": "ls -l",
+					"correct": false
+				},
+				{
+					"label": "sudo",
+					"correct": false
+				}
+			]
+		},
+		{
+			"label": "Wie beendet man Vim?",
+			"type": "checkbox",
+			"options": [
+				{
+					"label": "Einfach den Computer ausschalten.",
+					"correct": true
+				},
+				{
+					"label": ":wq",
+					"correct": false
+				},
+				{
+					"label": "Escape drücken und weinen.",
+					"correct": true
+				},
+				{
+					"label": "Sich in die Ecke setzen und für den Rest des Lebens die Entscheidung zu bereuen, überhaupt Vim geöffnet zu haben.",
+					"correct": true
+				}
+			]
+		}
+	]
+}
