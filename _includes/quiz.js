@@ -1,3 +1,8 @@
+let answersChecked = false;
+let elapsedTime = 0;
+const timeout = 5;
+const kickTimeout = 60;
+
 function checkAnswers(quiz) {
 	let total = 0;
 	let correct = 0;
@@ -21,6 +26,7 @@ function checkAnswers(quiz) {
 	}
 	let total_score = document.getElementById(`total-score`);
 	total_score.innerText = `${correct} von ${total} richtig. Das entspricht ${(correct / total * 100).toFixed(0)}%.`;
+	answersChecked = true;
 }
 
 function checkboxHandler(question, questionIndex) {
@@ -56,9 +62,28 @@ function radioHandler(question, questionIndex) {
 	return {subtotal: subtotal, subcorrect: subcorrect}
 }
 
+function fasterCheckbox() {
+	if(answersChecked == true) {
+		return;
+	}
+	if(elapsedTime != 0) {
+		alert(`${elapsedTime} Sekunden sind vergangen.`);
+	}
+	if(elapsedTime >= kickTimeout) {
+		alert(`Ganze ${elapsedTime} Sekunden hast du gebraucht. Ich bin von deiner Unfähigkeit nicht beeindruckt.`);
+		document.location.href = "/";
+	}
+	if(document.getElementById("faster-checkbox").checked) {
+		setTimeout(fasterCheckbox, timeout * 1000);
+		elapsedTime += timeout;
+	}
+}
+
 addEventListener("submit", (e) => {
 	e.preventDefault();
 	checkAnswers(current_page_quiz)
 })
+
+document.getElementById("faster-checkbox").addEventListener("click", fasterCheckbox);
 
 
